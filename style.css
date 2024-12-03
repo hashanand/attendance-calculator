@@ -1,0 +1,68 @@
+
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.circular-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#4070f4 0deg, #e0e0e0 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4070f4;
+    z-index: 10;
+}
+
+.calculation-card , .box-at{
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    overflow-x: auto;
+}
+
+.calculation-card:hover, .box-at:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.github-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+::-webkit-scrollbar {
+width: 0px;
+}

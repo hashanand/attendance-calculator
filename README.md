@@ -1,1 +1,1 @@
-# attendence-calculator
+# attendance-calculator

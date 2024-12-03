@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="calculator-container">
+            <h2 class="text-center mb-4">
+                <i class="fas fa-calculator me-2 text-primary"></i>Attendance Calculator
+            </h2>
+            <form id="attendanceForm">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-chalkboard me-2 text-primary"></i>Total Classes
+                        </label>
+                        <input type="number" class="form-control" id="totalClasses" required min="1">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">
+                            <i class="fas fa-check-circle me-2 text-primary"></i>Attended Classes
+                        </label>
+                        <input type="number" class="form-control" id="classesAttended" required min="0">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">
+                        <i class="fas fa-percent me-2 text-primary"></i>Required Attendance
+                    </label>
+                    <input type="number" class="form-control" id="requiredPercentage" required min="1" max="100"
+                        value="75">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-calculator me-2"></i>Calculate Attendance
+                </button>
+            </form>
+
+            <div id="resultSection" class="box-at d-none mt-4">
+                <div class="circular-progress">
+                    <div class="progress-value"></div>
+                </div>
+                <div class="text-center mt-3">
+                    <h4 id="resultText"></h4>
+                    <p id="bunkDetails" class="text-muted"></p>
+                </div>
+            </div>
+
+            <div id="calculationDetails" class="d-none mt-4">
+                <h3 class="text-center mb-4">Lekin ye sab Calculate kaise kiya ? 👇</h3>
+                <div id="calculationSteps"></div>
+            </div>
+            <div class="box-at mt-4">
+                <div class="github-link text-center">
+                    <p>Source code chahiye kya ?
+                        <a class="text-decoration-none" href="https://github.com/hashanand/attendance-calculator"
+                            target="_blank"><i class="fa-solid fa-link"></i> GitHub
+                        </a>Yha mil jaayega.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <p>Agar koi bhi dikkat hai ya kuch sujhav dena hai toh 👇
+                    </p>
+                </div>
+                <div class="d-flex align-items-center flex-column">
+                    <a class="text-decoration-none" href="mailto:hashanand.me@gmail.com"><i
+                            class="fa-solid fa-envelope"></i> hashanand.me@gmail.com
+                    </a>
+                    <a class="text-decoration-none" href="https://instagram.com/hashanand.me"><i
+                            class="fa-brands fa-instagram "></i> hashanand.me
+                    </a>
+                    <a class="text-decoration-none" href="https://github.com/hashanand"><i
+                            class="fa-brands fa-github "></i> hashanand
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
